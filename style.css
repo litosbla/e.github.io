@@ -128,3 +128,32 @@ a{
     z-index: -2;
     
 }
+#servicios{
+    padding: 5% 10%;
+    height: 80vh;
+}
+.info_1, .servicios{
+    width: 90%;
+}
+.servicios{
+    
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+   
+
+}
+.servicio{
+    border: 2px solid green;
+    border-radius: 10px;
+    padding: 10px;
+}
+.servicio li{
+    color: green;
+    list-style: none;
+}
+.servicio li span{
+    color: black
+}

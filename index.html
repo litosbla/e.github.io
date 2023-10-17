@@ -7,33 +7,32 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        #servicios{
-            padding: 5% 10%;
-        }
-        .info_1, .servicios{
-            width: 90%;
-        }
-        .servicios{
-            
-            padding: 10px;
+       
+        #carousel{
             display: flex;
-            justify-content: space-around;
-            align-items: center;
-            gap: 10px;
+            
+            height: 60vh;
+            margin: auto;
+            
            
+            border-radius: 30px;
+            overflow: hidden;
 
         }
-        .servicio{
-            border: 2px solid green;
-            border-radius: 10px;
-            padding: 10px;
+        #carousel img{
+            width: 0;
+            flex-grow: 1;
+            object-fit: cover;
+            opacity: 0.8;
+            transition: .5s ease;
         }
-        .servicio li{
-            color: green;
-            list-style: none;
+        #carousel img:hover{
+            cursor: pointer;
+            width: 300px;
+            opacity: 1;
         }
-        .servicio li span{
-            color: black
+        #sec_carousel{
+            padding: 5% 10%;
         }
     
     </style>
@@ -96,10 +95,16 @@
             <div class="servicio">
                 <h3>Evaluación de inversiones</h3>
                 <li><span>Evaluamos oportunidades de inversión en el mercado inmobiliario</span></li>
+        </div>        
+    </section>
+    <section id="sec_carousel">
+        <h1 class="titulo" style="text-align: center;">Conoce más</h1>
+        <p class="subtitulo"style="text-align:center">Contamos con <span style="color: green;">+1000</span> viviendas</p>
+        <div id="carousel">
+            <img src="assets/edi1.jpg" alt="edi1"><img src="assets/edi2.jpg" alt="edi2">
+            <img src="assets/edi3.jpg" alt="edi3"><img src="assets/edi4.jpg" alt="edi4">
         </div>
-
-        
-        
+       
     </section>
     <script src="main.js" type="module"></script>
 </body>
