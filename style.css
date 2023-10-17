@@ -1,0 +1,130 @@
+body{
+    margin: 0;
+    font-family: "Monserrat", sans-serif;
+    background-color: rgba(0, 0, 0, 0.2);
+    overflow-x: hidden;
+}
+
+main{
+    width: 100vw ;
+    height: 100vh ;
+    z-index: 0;
+
+}
+#container3D canvas{
+    width: 100vw ;
+    height: 100vh ;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* subheader*/
+.subheader{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+
+.contenido ul{
+    display: flex;
+    gap: 20px;
+    
+    height: 50px;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    
+}
+.contenido ul li{
+    padding: 0 1rem;
+    list-style: none;
+    
+}
+a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+.contenido{
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+}
+.icons{
+    background-color: #000;
+    margin-left: 10px;
+    border-radius: 20px;
+    display: flex;
+    gap: 10px;
+    padding: 5px 10px;
+
+    align-items: center;
+}
+.icons i {
+    color: white;
+}
+#user{
+    color: #000;
+    background-color: white;
+    padding: 4px;
+    border-radius: 50%;
+}
+/*texto titulo*/
+.left{
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    width: 30%;
+    transform: translate(0%,-40%);
+    display: flex;
+    flex-direction: column;
+    z-index: 4;
+    
+}
+
+.titulo{
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+}
+.subtitulo{
+    font-size: 1.5rem;
+}
+.input i{
+    position: absolute;
+    bottom: 7px;
+    left: 5px;
+}
+.input input{
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 30px;
+    cursor: pointer;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+#base{
+    position: absolute;
+    bottom: -5%;
+    left: 40%;
+    width: 450px;
+    z-index: -1;
+    filter: drop-shadow(2px 2px 5px gray)
+    
+}
+#recorrido{
+    position: absolute;
+    top: 40%;
+    z-index: -2;
+    
+}
