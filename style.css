@@ -97,12 +97,14 @@ a{
 .subtitulo{
     font-size: 1.5rem;
 }
-.input i{
+
+#input i{
     position: absolute;
     bottom: 7px;
     left: 5px;
+    
 }
-.input input{
+#input input{
     width: 100%;
     border-radius: 10px;
     border: none;
@@ -112,6 +114,10 @@ a{
     cursor: pointer;
     text-align: center;
     backdrop-filter: blur(10px);
+    transition: 1s;
+}
+#input{
+   width: 80%;
 }
 #base{
     position: absolute;
@@ -124,7 +130,8 @@ a{
 }
 #recorrido{
     position: absolute;
-    top: 40%;
+    bottom: -550px;
+    right: -400px;
     z-index: -2;
     
 }
@@ -156,4 +163,67 @@ a{
 }
 .servicio li span{
     color: black
+}
+#carousel{
+    display: flex;
+    
+    height: 60vh;
+    margin: auto;
+    
+   
+    border-radius: 30px;
+    overflow: hidden;
+
+}
+#carousel img{
+    width: 0;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: .5s ease;
+}
+#carousel img:hover{
+    cursor: pointer;
+    width: 300px;
+    opacity: 1;
+}
+#sec_carousel{
+    padding: 0 10%;
+    padding-bottom: 5%;
+}
+.overlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+ 
+    
+}
+.popup{
+    display: none;
+    position: fixed;
+    background-color: #fff;
+    width: 74%;
+    min-height: 70%;
+    top: 10%;
+    left: 13%;
+    border: 1px solid #333;
+    z-index: 8;
+    padding: 20px;
+    border-radius: 20px;
+}
+.popup i{
+    position: absolute;
+    top: 0;
+    left:0;
+    transform: translate(-50%,-50%);
+    padding: 15px;
+    background-color: #000000;
+    border-radius: 50%;
+    color: white;
+    border: 1px solid rgba(0, 0, 0, 0.202);
 }

@@ -8,32 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
        
-        #carousel{
-            display: flex;
-            
-            height: 60vh;
-            margin: auto;
-            
-           
-            border-radius: 30px;
-            overflow: hidden;
-
-        }
-        #carousel img{
-            width: 0;
-            flex-grow: 1;
-            object-fit: cover;
-            opacity: 0.8;
-            transition: .5s ease;
-        }
-        #carousel img:hover{
-            cursor: pointer;
-            width: 300px;
-            opacity: 1;
-        }
-        #sec_carousel{
-            padding: 5% 10%;
-        }
+        
     
     </style>
 </head>
@@ -63,19 +38,27 @@
         <div class="left">
             <h1 class="titulo">Compra y Vende Propiedades</h1>
             <h2 class="subtitulo">Facilitamos la compra y venta de propiedades</h2>
-            <div class="input">
+            <div id="input" onclick="openPopup('modal_busqueda')">
                 <input type="text" name="" id="inputBusqueda" >
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
            
+           
         </div>
-        <img id="base" src="assets/base.png" alt="">
+        
+        
 
         <img id="recorrido"src="assets/recorrido_1.png" alt="">
             
         
         
         <div id="container3D" style="z-index: 0;"></div>
+
+
+        <div class="popup" id="modal_busqueda" >
+            <i onclick="closePopup('modal_busqueda')" class="fa-solid fa-x"></i>
+        </div>
+        <div id="overlay" id="modal" class="overlay" onclick="closePopup('modal_busqueda')"></div>
     </main>
     <section id="servicios">
         <div class="info_1">
@@ -107,5 +90,33 @@
        
     </section>
     <script src="main.js" type="module"></script>
+    <script>
+       
+        function openPopup(identificador){
+            document.getElementById(identificador).style.display="block"
+            document.getElementById("overlay").style.display="block"
+            
+        }
+        function closePopup(identificador){
+            console.log(identificador)
+            if(identificador == 'todos'){
+                lista = ['modal_busqueda']
+                lista.forEach((element) => {
+                    document.getElementById(identificador).style.display="none"
+                    document.getElementById("overlay").style.display="none"
+
+                });
+                
+                
+            }else{
+                document.getElementById(identificador).style.display="none"
+                document.getElementById("overlay").style.display="none"
+
+            }
+            
+        }
+        
+
+    </script>
 </body>
 </html>
